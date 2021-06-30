@@ -3,4 +3,4 @@ theme: jekyll-theme-cayman
 title: Annoor PACS Integration
 description: A review of our custom PACS-integration strategy
 
-show_downloads: "false"
+show_downloads: false
