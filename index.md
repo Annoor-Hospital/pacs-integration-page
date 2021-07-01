@@ -15,27 +15,17 @@ etc
 
 ## Integration Goals
 
-<div style="width:70%;margin:auto;">
-![PACS System](./assets/images/pacs-systems.svg)
-</div>
+<img src="/pacs-integration-page/assets/images/pacs-systems.svg" alt="PACS System" style="width:70%;margin:auto;">
 
 ## Integration Proposal
 
-<div style="width:80%;margin:auto;">
-![Default PACS Integration](./assets/images/pacs-default.svg)
-</div>
+<img src="/pacs-integration-page/assets/images/pacs-default.svg" alt="Default PACS Integration" style="width:80%;margin:auto;">
 
-<div style="width:80%;margin:auto;">
-![Proposed PACS Integration](./assets/images/pacs-proposal.svg)
-</div>
+<img src="/pacs-integration-page/assets/images/pacs-proposal.svg" alt="Proposed PACS Integration" style="width:80%;margin:auto;">
 
-<div style="width:80%;margin:auto;">
-![Combining Orders and PACS Images](./assets/images/combine-order-image-note.svg)
-</div>
+<img src="/pacs-integration-page/assets/images/combine-order-image-note.svg" alt="Combining Orders and PACS Images" style="width:80%;margin:auto;">
 
-<div style="width:100%;margin:auto;">
-![PACS Setup Overview](./assets/images/pacs-flow.svg)
-</div>
+<img src="/pacs-integration-page/assets/images/pacs-flow.svg" alt="PACS Setup Overview" style="width:100%;margin:auto;">
 
 ## Visual Demonstration
 
