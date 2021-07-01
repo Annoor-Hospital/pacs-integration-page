@@ -1,40 +1,32 @@
-## Welcome to GitHub Pages
+# Introduction
 
-Jump to:
-- [Jekyll Themes](#jekyll-themes)
+Text goes here about what the purpose of this article is.
 
-You can use the [editor on GitHub](https://github.com/Annoor-Hospital/pacs-integration-page/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+## Outline
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+1. [Hospital Setting](#hospital-setting)
+2. [Integration Goals](#integration-goals)
+3. [Integration Proposal](#integration-proposal)
+4. [Visual Demonstration](#visual-demonstration)
 
-### Markdown
+## Hospital Setting
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+etc
 
-```markdown
-Syntax highlighted code block
+## Integration Goals
 
-# Header 1
-## Header 2
-### Header 3
+![PACS System](./assets/images/pacs-systems.svg)
 
-- Bulleted
-- List
+## Integration Proposal
 
-1. Numbered
-2. List
+![Default PACS Integration](./assets/images/pacs-default.svg)
 
-**Bold** and _Italic_ and `Code` text
+![Proposed PACS Integration](./assets/images/pacs-proposal.svg)
 
-[Link](url) and ![Image](src)
-```
+![Combining Orders and PACS Images](./assets/images/combine-order-image-note.svg)
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+![PACS Setup Overview](./assets/images/pacs-flow.svg)
 
-### Jekyll Themes
+## Visual Demonstration
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Annoor-Hospital/pacs-integration-page/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+etc
