@@ -17,6 +17,8 @@ etc
 
 ![PACS System](./assets/images/pacs-systems.svg)
 
+<img src="/pacs-integration-page/assets/images/pacs-systems.svg" alt="PACS System" style="width:200px;margin:auto;">
+
 ## Integration Proposal
 
 ![Default PACS Integration](./assets/images/pacs-default.svg)
