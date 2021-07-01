@@ -15,7 +15,11 @@ Being a hospital for chest diseases, many patients have a chest X-ray taken. Pri
 
 ## Hospital Systems
 
-When we began EMR integration 4 years ago, we found it helpful to think of at least 3 main digital systems which could be in place. One system is **patient registration**, allowing a unique ID to be assigned to patients. When a patient is a return patient, it should be possible to search for their previously assigned patient ID. Another system is the **EMR** system, for recording patient consultation information. These should be attached to the given patient ID. Bahmni provides both patient registration and EMR functionality. A third system is the **PACS/X-ray** system, allowing X-rays to be taken, stored and later retrieved.
+When we began EMR integration 4 years ago, we found it helpful to think of at least 3 main digital systems which could be in place.
+
+- The **patient registration** system allows a unique ID to be assigned to patients. For return patients, it should be possible to search for their previously assigned patient ID.
+- The **EMR** system records patient consultation information. These depends on the patients unique ID. Bahmni provides both patient registration and EMR functionality.
+- The **PACS/X-ray** system allows X-rays to be taken, stored and later retrieved.
 
 _Other systems include the lab and pharmacy systems, but these aren't included here for berevity._
 
@@ -28,12 +32,12 @@ Our PACS integration was guided by a number of wishes / goals. Some of the main 
 1. X-rays can be taken if needed without placing an order in the EMR system. This flexability is primarily to have an X-ray procedure even if the EMR system goes offline, or if technical problems arises in the PACS ordering system.
 1. The X-ray technician can assign an accession number to X-rays at the modality according to a seperate hand-written record system. This helps the X-ray system to be able to function without the EMR if needed, and is in keeping with previous procedures.
 1. X-ray DICOM files from prior to 2017 should be loaded into the PACS system, and doctors should have the ability to find and view these X-rays.
-1. It must be possible for a Radiologist to review X-ray images and provide a radiologist note.
+1. It should be possible for a Radiologist to review X-ray images and provide a radiologist note.
 
 In addition to the goals of the PACS system, integration with the EMR could provide a number of useful features to streamline hospital workflows. These potential EMR features include:
 1. Doctors can order X-rays
 1. Doctors can provide a note for the X-ray technician.
-1. X-rays taken by technician can have EMR data pre-filled (ie for consistent name transliteration).
+1. X-rays taken by technician can have EMR data pre-filled (for consistent name transliteration, etc).
 1. A radiologist can view and attach a radiologist note to the X-ray (within the EMR)
 1. Doctors can see a list of X-rays for a given patient
 1. Doctors can view the X-ray and the attached radiology notes
@@ -50,24 +54,24 @@ Some of the above goals are provided by the default Bahmni configuration, but no
 4. Once the X-ray order is fulfilled, the link becomes 'live' and will allow the doctor to open and view the X-ray.
 
 Some challenges for us with this method are:
-- The order list for a patient is retrieved only from the OpenMRS database. This means that any X-ray images added to the PACS system prior from before 2017, or taken without an EMR order, will not be visible.
-- The system does not know if an order has been fulfilled or not when the orders are displayed. This is only made known to the doctor when he tries to open an X-Ray order.
-- The setup requires that the accession number of a new X-Ray match the OpenMRS order number, which deviates from our current system.
+- The order list for a patient is retrieved only from the OpenMRS database. This means that any X-ray images added to the PACS system prior from before 2017, or taken without an EMR order, won't be visible.
+- The system doesn't know if an order has been fulfilled when the orders are displayed. This is only made known to the doctor when he tries to open an X-Ray order.
+- The system requires that the accession number of a new X-Ray match the OpenMRS order number, which deviates from our current accession number system.
 
 For these reasons it seemed necessary to make some customizations to the pacs integration system.
 
 ## Customized Integration
 
-A primary modification is to provide an extra functionality in Bahmni to retrieve patient images directly from the PACS system. This is used to generate the list of PACS images for a given patient on the patient dashboard.
+A primary modification in our customized integration is to provide an extra functionality in Bahmni to retrieve patient images directly from the PACS system. This is done using a DICOM query, and is used to generate the list of PACS images for a given patient on the patient dashboard.
 
 <img src="/pacs-integration-page/assets/images/pacs-proposal.svg" alt="Proposed PACS Integration" style="width:65%;margin:auto;display:block;">
 
-Rather than only depending on the orders in the OpenMRS database, we query the PACS sytem and match PACS images with their associated OpenMRS order, to combine them into a single list. Then the link to view the X-ray can be generated using the PACS study uuid. This provides a few benefits:
-- Bahmni can list all PACS images for a patient, regardless of whether or not they are associated with an order in OpenMRS. This allows old (pre-2017) X-rays to appear in the system, as well as new X-rays taken without an EMR order (ie in case the EMR system goes offline).
-- By querying both PACS and the OpenMRS database, we can see which orders have not been fulfilled and display them as pending.
+Rather than only depending on the orders in the OpenMRS database, we query the PACS sytem and match images to their associated OpenMRS order, and combine them into a single list. Then the link to view the X-ray can be generated using the PACS study uuid. This provides a few benefits:
+- Bahmni can list all PACS images for a patient, regardless of whether or not they are associated with an order in OpenMRS. This allows old (pre-2017) X-rays to appear in the system, as well as new X-rays taken without an EMR order (in case the EMR system goes offline).
+- By querying both PACS and the OpenMRS database, we can see which orders have not been fulfilled and mark them as pending.
 - We can avoid using a Bahmni-specific accession number, meaning we can keep our current accession number system.
 
-
+**HERE: writing about radiologist note observations, radiologist app, and outline how orders, images and notes are combined.**
 
 In addition, add functionality for a radiologist to attach a note to a PACS image.
 - concept group corresponding to the external resource (PACS image) containing note, as well as uuid of PACS image
