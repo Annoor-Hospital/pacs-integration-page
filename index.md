@@ -1,4 +1,4 @@
-This is an article outlining how PACS-integration was implemented on our local OpenMRS + Bahmni based hospital system. It may also help outline how Bahmni pacs-integration works in general. It is also my hope to be able to get feeback about this process, and to hopefully foster discussion about how pacs-integration can be better supported in openmrs in general.
+This is an article outlining how PACS-integration was implemented on our local OpenMRS + Bahmni based hospital system. It may also help outline how Bahmni pacs-integration works in general. It is also my hope to be able to get feeback about this process, and to hopefully contribute to discussion about how pacs-integration is done in openmrs in general.
 
 ## Outline
 
@@ -20,7 +20,7 @@ Being a hospital for chest diseases, many patients have a chest X-ray taken. Pri
 
 When we began EMR integration 4 years ago, we found it helpful to think of at least 3 main digital systems which could be in place.
 
-- The **patient registration** system allows a unique ID to be assigned to patients. For return patients, it should be possible to search for their previously assigned patient ID.
+- The **patient registration** system allows a unique ID to be assigned to patients and stores some basic information about patients. For return patients, it should be possible to search for their previously assigned patient ID.
 - The **EMR** system records patient consultation information. This uses the patient's unique ID. Bahmni provides both patient registration and EMR functionality.
 - The **PACS/X-ray** system allows X-rays to be taken, stored and retrieved for viewing.
 
