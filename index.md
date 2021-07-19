@@ -3,9 +3,12 @@ This is an article outlining how PACS-integration was implemented on our local O
 ## Outline
 
 1. [Hospital Setting](#hospital-setting)
-2. [Integration Goals](#integration-goals)
-3. [Integration](#integration)
-4. [Visual Demonstration](#visual-demonstration)
+1. [Hospital Systems](#hospital-systems)
+1. [PACS Integration Goals](#pacs-integration-goals)
+1. [Default Integration](#default-integration)
+1. [Customized Integration](#customized-integration)
+1. [PACS Processes](#pacs-processes)
+1. [Screenshots](#screenshots)
 
 ## Hospital Setting
 
@@ -25,7 +28,7 @@ _Other systems include the lab and pharmacy systems, but these aren't included h
 
 <img src="/pacs-integration-page/assets/images/pacs-systems.svg" alt="PACS System" style="width:50%;margin:auto;display:block;">
 
-### PACS Integration Goals
+## PACS Integration Goals
 
 Our PACS integration was guided by a number of wishes / goals. Some of the main goals were:
 
@@ -42,7 +45,7 @@ In addition to the goals of the PACS system, integration with the EMR could also
 1. Doctors can see a list of X-rays for a given patient.
 1. Doctors can view X-rays and see attached radiology notes.
 
-## Default Bahmni pacs-integration
+## Default Integration
 
 Some of the above goals are provided by the default Bahmni configuration, but not all. The following outlines the basic structure of the default integration:
 
@@ -77,7 +80,7 @@ The process of retrieving X-Ray orders / images for a patient then involves 3 in
 
 <img src="/pacs-integration-page/assets/images/combine-order-image-note.svg" alt="Combining Orders and PACS Images" style="width:80%;margin:auto;display:block;">
 
-### PACS order and viewing process
+## PACS Processes
 
 The entire PACS integration system can seem fairly complicated. I will attempt here to outline here the PACS integration system and processes. Note that this system is the same as the default Bahmni integration apart from some customizations and the extra DICOM query in steps 7 and 8.
 
