@@ -18,7 +18,7 @@ Being a hospital for chest diseases, many patients have a chest X-ray taken. Pri
 
 ## Hospital Systems
 
-When we began EMR integration 4 years ago, we found it helpful to think of at least 3 main digital systems which could be in place.
+When we began EMR integration 4 years ago, it was helpful to think of at least 3 main digital systems which could be in place.
 
 - The **patient registration** system allows a unique ID to be assigned to patients and stores some basic information about patients. For return patients, it should be possible to search for their previously assigned patient ID.
 - The **EMR** system records patient consultation information. This uses the patient's unique ID. Bahmni provides both patient registration and EMR functionality.
@@ -30,18 +30,18 @@ _Other systems include the lab and pharmacy systems, but these aren't included h
 
 ## PACS Integration Goals
 
-Our PACS integration was guided by a number of wishes / goals. Some of the main goals were:
+Our PACS integration was guided by a number of wishes / goals. Some of the wishes were:
 
-1. If needed, X-rays can be taken without placing an order in the EMR system. This flexability is primarily to have an X-ray procedure even if the EMR system goes offline, or if technical problems arises in the PACS ordering system.
-1. The X-ray technician can assign an accession number to X-rays at the modality using a seperate hand-written system. This helps the X-ray system to be able to function without the EMR if needed, and is in keeping with previous procedures.
 1. X-ray DICOM files from prior to 2017 should be loaded into the PACS system, and doctors should have the ability to find and view these X-rays.
 1. It should be possible for a Radiologist to review X-ray images and provide a radiologist note.
+1. It is nice if X-rays can continue to be taken without placing an order in the EMR system, in case the EMR system goes offline or has technical problems.
+1. It is helpful if the hospital can continue to use its existing accession number system, where an accession number is assigned to X-rays by hand at the modality.
 
-In addition to the goals of the PACS system, integration with the EMR could also provide a number of useful features to streamline hospital workflows. These potential EMR features include:
+In addition to the goals of the PACS system, integration with the EMR could also provide a number of useful features to streamline hospital workflows. These EMR features include:
 1. Doctors can order X-rays.
 1. Doctors can provide a note for the X-ray technician.
-1. X-rays taken by technician can have EMR data pre-filled (for consistent name transliteration, etc).
-1. A radiologist can view and attach a radiologist note to the X-ray (within the EMR).
+1. X-rays taken by technician can have EMR data pre-filled (for consistent name spelling, etc).
+1. A radiologist can view and attach a radiologist note to the X-ray.
 1. Doctors can see a list of X-rays for a given patient.
 1. Doctors can view X-rays and see attached radiology notes.
 
