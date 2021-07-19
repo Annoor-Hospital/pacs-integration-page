@@ -97,10 +97,14 @@ The entire PACS integration system can seem fairly complicated. I will attempt h
 
 ## Screenshots
 
-<img src="/pacs-integration-page/assets/images/screenshot1_home_radiology_link.png" alt="Radiology App Link" style="width:100%;margin:auto;display:block;">
+### Link to Radiology App
+<img src="/pacs-integration-page/assets/images/screenshot1_home_radiology_link.png" alt="Radiology App Link" style="max-height:400px;margin:auto;display:block;">
 
+### Radiology App: List of daily PACS images
 <img src="/pacs-integration-page/assets/images/screenshot5_radiology_app.png" alt="Radiology App List" style="width:100%;margin:auto;display:block;">
 
+### Radiology App: X-Ray Study Notes
 <img src="/pacs-integration-page/assets/images/screenshot6_radiology_app2.png" alt="Radiology App Image" style="width:100%;margin:auto;display:block;">
 
+### Patient Dashboard
 <img src="/pacs-integration-page/assets/images/screenshot7_pacs_display_control.png" alt="Patient Dashboard" style="width:100%;margin:auto;display:block;">
