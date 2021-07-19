@@ -82,7 +82,7 @@ The process of retrieving X-Ray orders / images for a patient then involves 3 in
 
 ## PACS Processes
 
-The entire PACS integration system can seem fairly complicated. I will attempt here to outline here the PACS integration system and processes. Note that this system is the same as the default Bahmni integration apart from some customizations and the extra DICOM query in steps 7 and 8.
+The entire PACS integration system can seem fairly complicated. I will attempt here to outline the PACS integration system and processes. Note that this system is the same as the default Bahmni integration apart from some customizations and the extra DICOM query in steps 7 and 8.
 
 <img src="/pacs-integration-page/assets/images/pacs-flow.svg" alt="PACS Setup Overview" style="width:100%;margin:auto;display:block;">
 
